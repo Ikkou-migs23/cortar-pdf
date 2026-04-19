@@ -2,7 +2,7 @@ from pypdf import PdfReader, PdfWriter
 import re
 
 "--------------Principal----------------------"
-"""
+
 escrever = PdfWriter()
 
 leitura = PdfReader(r"/home/migs/Documentos/projetos/cortar-pdf/pdf/origin/Macunaíma (Mário de Andrade).pdf")
@@ -16,7 +16,6 @@ for x in range(7, 158):
 with open("novo_Macunaima.pdf", "wb") as f:
     escrever.write(f)
 
-"""
 
 
 "--------------Segundaria (Feito p/ IA)----------------------"
