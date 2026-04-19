@@ -5,7 +5,7 @@ import re
 
 escrever = PdfWriter()
 
-leitura = PdfReader(r"/home/migs/Documentos/projetos/cortar-pdf/pdf/origin/Macunaíma (Mário de Andrade).pdf")
+leitura = PdfReader(r"/home/Aquivo.pdf")
 numero_paginas = len(leitura.pages)
 
 for x in range(7, 158): 
@@ -13,7 +13,7 @@ for x in range(7, 158):
     escrever.add_page(leitura.pages[x])
 
 
-with open("novo_Macunaima.pdf", "wb") as f:
+with open("novo.pdf", "wb") as f:
     escrever.write(f)
 
 
@@ -21,7 +21,7 @@ with open("novo_Macunaima.pdf", "wb") as f:
 "--------------Segundaria (Feito p/ IA)----------------------"
 
 # Caminho do PDF
-caminho_pdf = "/home/migs/Documentos/projetos/cortar-pdf/pdf/Novo/novo_Macunaima.pdf"
+caminho_pdf = "/home/novo.pdf"
 
 leitura = PdfReader(caminho_pdf)
 
@@ -73,7 +73,7 @@ for i, grupo in enumerate(grupos):
         for pagina in range(inicio, fim + 1):
             writer.add_page(leitura.pages[pagina])
 
-    nome_arquivo = f"/home/migs/Documentos/projetos/cortar-pdf/pdf/corte/Macunaima_{i+1}.pdf"
+    nome_arquivo = f"/home/novo_{i+1}.pdf"
 
     with open(nome_arquivo, "wb") as f:
         writer.write(f)
